@@ -147,7 +147,9 @@ Se plantea entonces la ecuación completa de variables de estado discreta de Kal
 
 $$x_{k+1} = Fx_k + Gu_k + \eta_k$$
 
-$$\begin{bmatrix} \phi_{k+1} \\ \theta_{k+1} \\ \psi_{k+1} \\ b_{x,k+1} \\ b_{y,k+1} \\ b_{z,k+1} \end{bmatrix} = \underbrace{\begin{bmatrix} 1 & 0 & 0 & -\Delta t & 0 & 0 \\ 0 & 1 & 0 & 0 & -\Delta t & 0 \\ 0 & 0 & 1 & 0 & 0 & -\Delta t \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}}_{F} \begin{bmatrix} \phi_k \\ \theta_k \\ \psi_k \\ b_{x,k} \\ b_{y,k} \\ b_{z,k} \end{bmatrix} + \underbrace{\begin{bmatrix} \Delta t & 0 & 0 \\ 0 & \Delta t & 0 \\ 0 & 0 & \Delta t \\ 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}}_{G} \begin{bmatrix} \omega_{x,k} \\ \omega_{y,k} \\ \omega_{z,k} \end{bmatrix} + \begin{bmatrix} \eta_{\phi,k} \\ \eta_{\theta,k} \\ \eta_{\psi,k} \\ \eta_{bx,k} \\ \eta_{by,k} \\ \eta_{bz,k} \end{bmatrix}$$
+$$
+\begin{bmatrix} \phi_{k+1} \\ \theta_{k+1} \\ \psi_{k+1} \\ b_{x,k+1} \\ b_{y,k+1} \\ b_{z,k+1} \end{bmatrix} = \underbrace{\begin{bmatrix} 1 & 0 & 0 & -\Delta t & 0 & 0 \\ 0 & 1 & 0 & 0 & -\Delta t & 0 \\ 0 & 0 & 1 & 0 & 0 & -\Delta t \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}}_{F} \begin{bmatrix} \phi_k \\ \theta_k \\ \psi_k \\ b_{x,k} \\ b_{y,k} \\ b_{z,k} \end{bmatrix} + \underbrace{\begin{bmatrix} \Delta t & 0 & 0 \\ 0 & \Delta t & 0 \\ 0 & 0 & \Delta t \\ 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}}_{G} \begin{bmatrix} \omega_{x,k} \\ \omega_{y,k} \\ \omega_{z,k} \end{bmatrix} + \begin{bmatrix} \eta_{\phi,k} \\ \eta_{\theta,k} \\ \eta_{\psi,k} \\ \eta_{bx,k} \\ \eta_{by,k} \\ \eta_{bz,k} \end{bmatrix}
+$$
 
 $$\eta_k \sim \mathcal{N}(0, Q)$$
 
